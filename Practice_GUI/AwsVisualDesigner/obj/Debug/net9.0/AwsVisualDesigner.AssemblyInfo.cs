@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AwsVisualDesigner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+336670d11576801a0531410518f9966a30d7d9ae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0922c7ed6268bc5b4cc174a6a00598180ccf7483")]
 [assembly: System.Reflection.AssemblyProductAttribute("AwsVisualDesigner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AwsVisualDesigner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
