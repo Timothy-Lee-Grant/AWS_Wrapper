@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice_Application", "Practice_Application\Practice_Application.csproj", "{D0101010-2D5C-48FF-90C2-BA41E4C1BF74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Practice_GUI", "Practice_GUI", "{F66077E7-6006-41FD-8BA1-A11F722EAFC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwsVisualDesigner", "Practice_GUI\AwsVisualDesigner\AwsVisualDesigner.csproj", "{4F37DC07-F976-4E43-8D73-4B06530F6440}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0101010-2D5C-48FF-90C2-BA41E4C1BF74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0101010-2D5C-48FF-90C2-BA41E4C1BF74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0101010-2D5C-48FF-90C2-BA41E4C1BF74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0101010-2D5C-48FF-90C2-BA41E4C1BF74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F37DC07-F976-4E43-8D73-4B06530F6440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F37DC07-F976-4E43-8D73-4B06530F6440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F37DC07-F976-4E43-8D73-4B06530F6440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F37DC07-F976-4E43-8D73-4B06530F6440}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4F37DC07-F976-4E43-8D73-4B06530F6440} = {F66077E7-6006-41FD-8BA1-A11F722EAFC7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {268439D7-5431-48F6-9508-9F80A8CBD421}
+	EndGlobalSection
+EndGlobal
