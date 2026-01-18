@@ -49,7 +49,15 @@
               "target": "Package",
               "version": "[11.0.0, )"
             },
+            "Avalonia.Desktop": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Avalonia.ReactiveUI": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.0.0, )"
             },

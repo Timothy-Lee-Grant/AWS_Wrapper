@@ -46,15 +46,21 @@ public class ConnectionViewModel : ViewModelBase
         get
         {
             if (Source == null || Target == null) return new PathGeometry();
-            var sx = Source.X + Source.Width / 2;
-            var sy = Source.Y + Source.Height / 2;
-            var tx = Target.X + Target.Width / 2;
-            var ty = Target.Y + Target.Height / 2;
+            var sx = Source!.X + Source!.Width / 2;
+            var sy = Source!.Y + Source!.Height / 2;
+            var tx = Target!.X + Target!.Width / 2;
+            var ty = Target!.Y + Target!.Height / 2;
 
             var pg = new PathGeometry();
             var fig = new PathFigure { StartPoint = new Point(sx, sy) };
             var midX = (sx + tx) / 2;
-            fig.Segments.Add(new BezierSegment(new Point(midX, sy), new Point(midX, ty), new Point(tx, ty)));
+            var bez = new BezierSegment
+            {
+                Point1 = new Point(midX, sy),
+                Point2 = new Point(midX, ty),
+                Point3 = new Point(tx, ty)
+            };
+            fig.Segments.Add(bez);
             pg.Figures.Add(fig);
             return pg;
         }

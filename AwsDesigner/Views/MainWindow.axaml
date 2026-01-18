@@ -7,7 +7,7 @@
 
   <DockPanel LastChildFill="True">
     <!-- Top toolbar -->
-    <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Background="#2b2b2b" Spacing="8" Padding="8">
+    <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Background="#2b2b2b" Spacing="8" Margin="8">
       <TextBlock Foreground="White" VerticalAlignment="Center" FontWeight="Bold" Text="AWS Visual Designer"/>
       <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
         <Button Content="Add EC2" Command="{Binding Workspace.Commands.AddEc2}" Margin="8,0"/>
@@ -39,7 +39,7 @@
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
           <Canvas Background="#1e1e1e" Name="DesignerCanvas">
             <!-- Connections layer -->
-            <ItemsControl Items="{Binding Workspace.Connections}">
+            <ItemsControl ItemsSource="{Binding Workspace.Connections}">
               <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                   <Canvas />
@@ -53,7 +53,7 @@
             </ItemsControl>
 
             <!-- Nodes layer -->
-            <ItemsControl Items="{Binding Workspace.Nodes}">
+            <ItemsControl ItemsSource="{Binding Workspace.Nodes}">
               <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                   <Canvas />

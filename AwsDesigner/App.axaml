@@ -3,7 +3,6 @@
              x:Class="AwsDesigner.App">
 
   <Application.Styles>
-    <FluentTheme Mode="Dark"/>
-    <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml" />
+    <FluentTheme />
   </Application.Styles>
 </Application>

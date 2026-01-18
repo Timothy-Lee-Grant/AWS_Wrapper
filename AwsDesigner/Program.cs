@@ -1,5 +1,6 @@
 using Avalonia;
 using Avalonia.ReactiveUI;
+using AwsDesigner;
 
 internal class Program
 {
