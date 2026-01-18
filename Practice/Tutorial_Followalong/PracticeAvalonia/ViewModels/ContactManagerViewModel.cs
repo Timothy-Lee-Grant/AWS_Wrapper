@@ -48,6 +48,7 @@ public partial class ContactManagerViewModel : ViewModelBase
         };
         Contacts.Add(newContact);
         NewName = NewEmail = NewPhone = string.Empty;
+
     }
 
     [RelayCommand]
