@@ -16,8 +16,15 @@
     </Design.DataContext>
 
     <StackPanel>
-    <TextBlock Text="{Binding Message}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-    <TextBlock Text="{Binding PrivateMessage}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding Message}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding PrivateMessage}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ComboBox   ItemSource="{Binding Regions}"
+                    SelectedItem="{Binding SelectedRegion}"
+                    PlaceholderText="Choose an option"
+                    Width="200" />
+        <TextBlock  Text="{Binding SelectedRegion, StringFormat='You selected: {0}'}"
+                    IsVisible="{Binding SelectedRegion, Converter={x:Static ObjectConverters.IsNotNull}}"
+                    Classes="secondary"/>
     </StackPanel>
 
 </Window>
