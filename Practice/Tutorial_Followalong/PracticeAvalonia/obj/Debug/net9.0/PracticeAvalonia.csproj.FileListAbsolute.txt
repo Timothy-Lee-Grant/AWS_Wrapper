@@ -1,0 +1,8 @@
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/Practice/Tutorial_Followalong/PracticeAvalonia/obj/Debug/net9.0/PracticeAvalonia.csproj.AssemblyReference.cache
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/Practice/Tutorial_Followalong/PracticeAvalonia/obj/Debug/net9.0/Avalonia/Resources.Inputs.cache
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/Practice/Tutorial_Followalong/PracticeAvalonia/obj/Debug/net9.0/Avalonia/resources
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/Practice/Tutorial_Followalong/PracticeAvalonia/obj/Debug/net9.0/PracticeAvalonia.GeneratedMSBuildEditorConfig.editorconfig
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/Practice/Tutorial_Followalong/PracticeAvalonia/obj/Debug/net9.0/PracticeAvalonia.AssemblyInfoInputs.cache
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/Practice/Tutorial_Followalong/PracticeAvalonia/obj/Debug/net9.0/PracticeAvalonia.AssemblyInfo.cs
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/Practice/Tutorial_Followalong/PracticeAvalonia/obj/Debug/net9.0/PracticeAvalonia.csproj.CoreCompileInputs.cache
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/Practice/Tutorial_Followalong/PracticeAvalonia/obj/Debug/net9.0/PracticeAvalonia.sourcelink.json

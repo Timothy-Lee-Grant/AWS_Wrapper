@@ -1,0 +1,225 @@
+<Window
+    RequestedThemeVariant="Dark"
+    Title="ContactManagerWindow"
+    d:DesignHeight="750"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="PracticeAvalonia.Views.ContactManagerWindow"
+    x:DataType="vm:ContactManagerViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:PracticeAvalonia.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Design.DataContext>
+        <vm:ContactManagerViewModel />
+    </Design.DataContext>
+
+    <Window.Styles>
+        <!--  Main background style  -->
+        <Style Selector="Grid.main-bg">
+            <Setter Property="Background">
+                <LinearGradientBrush EndPoint="100%, 100%" StartPoint="0%, 0%">
+                    <GradientStop Color="#0f0f1e" Offset="0" />
+                    <GradientStop Color="#1a1a2e" Offset="0.5" />
+                    <GradientStop Color="#16213e" Offset="1" />
+                </LinearGradientBrush>
+            </Setter>
+        </Style>
+
+        <!--  Card Styles  -->
+        <Style Selector="Border.glass-card">
+            <Setter Property="Background">
+                <LinearGradientBrush EndPoint="100%, 100%" StartPoint="0%, 0%">
+                    <GradientStop Color="#25ffffff" Offset="0" />
+                    <GradientStop Color="#15ffffff" Offset="1" />
+                </LinearGradientBrush>
+            </Setter>
+            <Setter Property="BorderBrush" Value="#40ffffff" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="15" />
+            <Setter Property="Effect">
+                <DropShadowEffect
+                    BlurRadius="20"
+                    Color="#30000000"
+                    OffsetY="8" />
+            </Setter>
+        </Style>
+
+        <!--  Contact Item Style  -->
+        <Style Selector="Border.contact-item">
+            <Setter Property="Background">
+                <LinearGradientBrush EndPoint="100%,100%" StartPoint="0%,0%">
+                    <GradientStop Color="#20ffffff" Offset="0" />
+                    <GradientStop Color="#10ffffff" Offset="1" />
+                </LinearGradientBrush>
+            </Setter>
+            <Setter Property="BorderBrush" Value="#30ffffff" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="12" />
+            <Setter Property="Margin" Value="0,3" />
+            <Setter Property="Effect">
+                <DropShadowEffect
+                    BlurRadius="8"
+                    Color="#20000000"
+                    OffsetY="3" />
+            </Setter>
+        </Style>
+
+        <Style Selector="ListBoxItem">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="CornerRadius" Value="15" />
+        </Style>
+
+        <!--  Text Styles  -->
+        <Style Selector="TextBlock.title">
+            <Setter Property="Foreground" Value="#f8fafc" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Effect">
+                <DropShadowEffect BlurRadius="5" Color="#40000000" />
+            </Setter>
+        </Style>
+
+        <Style Selector="TextBlock.primary">
+            <Setter Property="Foreground" Value="#f1f5f9" />
+            <Setter Property="FontWeight" Value="Medium" />
+        </Style>
+
+        <Style Selector="TextBlock.secondary">
+            <Setter Property="Foreground" Value="#94a3b8" />
+        </Style>
+
+        <Style Selector="TextBlock.accent">
+            <Setter Property="Foreground" Value="#38bdf8" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+        </Style>
+
+        <Style Selector="TextBlock.success">
+            <Setter Property="Foreground" Value="#10b981" />
+            <Setter Property="FontWeight" Value="Medium" />
+        </Style>
+
+        <!--  Input Styles  -->
+        <Style Selector="TextBox.modern-input">
+            <Setter Property="Background">
+                <LinearGradientBrush StartPoint="0%,0%">
+                    <GradientStop Color="#25354151" Offset="0" />
+                    <GradientStop Color="#35474151" Offset="1" />
+                </LinearGradientBrush>
+            </Setter>
+            <Setter Property="Foreground" Value="#f8f1fc" />
+            <Setter Property="BorderBrush" Value="#6b7280" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="Padding" Value="12, 10" />
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+
+        <!--  Search textbox  -->
+        <Style Selector="TextBox.search-input">
+            <Setter Property="Background">
+                <LinearGradientBrush EndPoint="100%, 100%" StartPoint="0%, 0%">
+                    <GradientStop Color="#25374151" Offset="0" />
+                    <GradientStop Color="#35374151" Offset="1" />
+                </LinearGradientBrush>
+            </Setter>
+            <Setter Property="Foreground" Value="#f8fafc" />
+            <Setter Property="BorderBrush" Value="#38bdf8" />
+            <Setter Property="CornerRadius" Value="25" />
+            <Setter Property="Padding" Value="20, 12" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Effect">
+                <DropShadowEffect BlurRadius="10" Color="#2038BDF8" />
+            </Setter>
+        </Style>
+
+        <!--  Button Styles  -->
+        <Style Selector="Button.primary-btn">
+            <Setter Property="Background">
+                <LinearGradientBrush EndPoint="100%, 100%" StartPoint="0%, 0%">
+                    <GradientStop Color="#3b82f6" Offset="0" />
+                    <GradientStop Color="#1d4ed8" Offset="1" />
+                </LinearGradientBrush>
+            </Setter>
+            <Setter Property="Foreground" Value="#fff" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="CornerRadius" Value="12" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Effect">
+                <DropShadowEffect
+                    BlurRadius="10"
+                    Color="#403B82F6"
+                    OffsetY="3" />
+            </Setter>
+        </Style>
+
+        <Style Selector="Button.primary-btn:pointerover /template/ ContentPresenter">
+            <Setter Property="Background">
+                <LinearGradientBrush EndPoint="100%,100%" StartPoint="0%,0%">
+                    <GradientStop Color="#2563EB" Offset="0" />
+                    <GradientStop Color="#1E40AF" Offset="1" />
+                </LinearGradientBrush>
+            </Setter>
+        </Style>
+
+        <!--  Delete button  -->
+        <Style Selector="Button.delete-btn">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="Foreground" Value="#ef4444" />
+        </Style>
+
+        <Style Selector="Button.delete-btn:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="#20EF4444" />
+        </Style>
+
+        <!--  Info panel  -->
+        <Style Selector="Border.info-panel">
+            <Setter Property="Background">
+                <LinearGradientBrush EndPoint="100%, 100%" StartPoint="0%, 0%">
+                    <GradientStop Color="#2510B981" Offset="0" />
+                    <GradientStop Color="#1510B981" Offset="1" />
+                </LinearGradientBrush>
+            </Setter>
+            <Setter Property="CornerRadius" Value="12" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="#3010B981" />
+        </Style>
+
+        <!--  Selected contact info  -->
+        <Style Selector="Border.selected-info">
+            <Setter Property="Background">
+                <LinearGradientBrush EndPoint="100%, 100%" StartPoint="0%, 0%">
+                    <GradientStop Color="#2538BDF8" Offset="0" />
+                    <GradientStop Color="#1538BDF8" Offset="1" />
+                </LinearGradientBrush>
+            </Setter>
+
+            <Setter Property="CornerRadius" Value="12" />
+            <Setter Property="BorderBrush" Value="#3038bff8" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+
+    </Window.Styles>
+
+    <Grid Classes='main-bg' RowDefinition="Auto, *">
+    <!--Header-->
+        <StackPanel>
+            <TextBlock
+                FontSize="32"
+                HorizontalAlignment="Center"
+                Text="Contact Manager"
+                Margin="0,0,0,25"/>
+            <TextBox
+                Classes="search-input"
+                Text="{Binding SearchText}"
+                Watermark="Search contacts"
+                Width="350" /> 
+        </StackPanel>
+
+        <!--Main content-->
+    </Grid>
+
+</Window>
