@@ -204,22 +204,150 @@
 
     </Window.Styles>
 
-    <Grid Classes='main-bg' RowDefinition="Auto, *">
-    <!--Header-->
+    <Grid Classes="main-bg" RowDefinitions="Auto, *">
+        <!--  Header  -->
         <StackPanel>
             <TextBlock
                 FontSize="32"
                 HorizontalAlignment="Center"
-                Text="Contact Manager"
-                Margin="0,0,0,25"/>
+                Margin="0,0,0,25"
+                Text="👥 Contact Manager" />
             <TextBox
                 Classes="search-input"
                 Text="{Binding SearchText}"
-                Watermark="Search contacts"
-                Width="350" /> 
+                Watermark="🔍 Search contacts"
+                Width="350" />
         </StackPanel>
+        <!--  Main Content  -->
+        <Grid
+            ColumnDefinitions="2*, 1.5*"
+            Grid.Row="1"
+            Margin="20">
+            <Border Classes="glass-card" Padding="25">
+                <Grid RowDefinitions="Auto, *">
+                    <TextBlock
+                        Classes="title"
+                        Margin="0,0,0,10"
+                        Text="📋 All Contacts" />
+                    <ListBox
+                        Background="Transparent"
+                        Grid.Row="1"
+                        ItemsSource="{Binding FilteredContacts}"
+                        SelectedItem="{Binding SelectedContact}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border Classes="contact-item" Padding="15">
+                                    <Grid ColumnDefinitions="*, Auto">
+                                        <StackPanel>
+                                            <TextBlock
+                                                Classes="primary"
+                                                FontSize="16"
+                                                Text="{Binding Name}" />
+                                            <TextBlock
+                                                Classes="accent"
+                                                FontSize="13"
+                                                Margin="0,3,0,0"
+                                                Text="{Binding Email}" />
+                                            <TextBlock
+                                                Classes="success"
+                                                FontSize="13"
+                                                Margin="0,2,0,0"
+                                                Text="{Binding Phone}" />
+                                        </StackPanel>
 
-        <!--Main content-->
+                                        <!--  Delete button  -->
+                                        <Button
+                                            Classes="delete-btn"
+                                            Command="{Binding $parent[ListBox].((vm:ContactManagerViewModel)DataContext).DeleteContactCommand}"
+                                            CommandParameter="{Binding}"
+                                            Content="🗑️"
+                                            FontSize="18"
+                                            Grid.Column="1"
+                                            Height="35"
+                                            Width="35" />
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </Border>
+            <!--  Add Contact Form  -->
+            <Border
+                Classes="glass-card"
+                Grid.Column="1"
+                Margin="20,0,0,0"
+                Padding="25">
+                <ScrollViewer
+                    Margin="-10,0,-20,0"
+                    Padding="0,0,20,0"
+                    VerticalScrollBarVisibility="Auto">
+                    <StackPanel Spacing="20">
+                        <TextBlock
+                            Classes="title"
+                            FontSize="20"
+                            Text="✨ Add new contact" />
+                        <StackPanel Spacing="8">
+                            <TextBlock Classes="primary" Text="Full Name" />
+                            <TextBox Classes="modern-input" Text="{Binding NewName}" />
+                        </StackPanel>
+                        <StackPanel Spacing="8">
+                            <TextBlock Classes="primary" Text="Email Address" />
+                            <TextBox Classes="modern-input" Text="{Binding NewEmail}" />
+                        </StackPanel>
+                        <StackPanel Spacing="8">
+                            <TextBlock Classes="primary" Text="Phone Number" />
+                            <TextBox Classes="modern-input" Text="{Binding NewPhone}" />
+                        </StackPanel>
+
+                        <!--  Add contact button  -->
+                        <Button
+                            Classes="primary-btn"
+                            Command="{Binding AddContactCommand}"
+                            Content="+ Add Contact"
+                            FontSize="16"
+                            HorizontalAlignment="Stretch"
+                            HorizontalContentAlignment="Center"
+                            Margin="0,10,0,0"
+                            Padding="0,15" />
+
+                        <!--  Contact count Info  -->
+
+                        <Border
+                            Classes="info-panel"
+                            Margin="0,10,0,0"
+                            Padding="15">
+                            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                <TextBlock Classes="secondary" Text="📊 Total Contacts: " />
+                                <TextBlock
+                                    Classes="success"
+                                    FontWeight="Bold"
+                                    Text="{Binding Contacts.Count}" />
+                            </StackPanel>
+                        </Border>
+
+                        <!--  Selected contact info  -->
+                        <Border
+                            Classes="selected-info"
+                            IsVisible="{Binding SelectedContact, Converter={x:Static ObjectConverters.IsNotNull}}"
+                            Padding="15">
+                            <StackPanel Spacing="8">
+                                <TextBlock
+                                    Classes="accent"
+                                    HorizontalAlignment="Center"
+                                    Text="Selected Contact" />
+                                <TextBlock Classes="primary" Text="{Binding SelectedContact.Name}" />
+                                <TextBlock Text="{Binding SelectedContact.Email}" />
+                                <TextBlock Text="{Binding SelectedContact.Phone}" />
+                            </StackPanel>
+                        </Border>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+        </Grid>
+
+
     </Grid>
 
 </Window>
