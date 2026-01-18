@@ -56,4 +56,9 @@ public partial class ContactManagerViewModel : ViewModelBase
         Contacts.Remove(contact);
         if(SelectedContact == contact) SelectedContact = null;
     }
+
+    partial void OnSearchTextChanged(string text)
+    {
+        OnPropertyChanged(nameof(FilteredContacts));
+    }
 }
