@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "ykFxpbOOWig=",
+  "success": true,
+  "projectFilePath": "/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/AwsDesigner/AwsDesigner.csproj",
+  "expectedPackageFiles": [
+    "/home/timothy/.nuget/packages/avalonia/11.0.0/avalonia.11.0.0.nupkg.sha512",
+    "/home/timothy/.nuget/packages/avalonia.buildservices/0.0.28/avalonia.buildservices.0.0.28.nupkg.sha512",
+    "/home/timothy/.nuget/packages/avalonia.reactiveui/11.0.0/avalonia.reactiveui.11.0.0.nupkg.sha512",
+    "/home/timothy/.nuget/packages/avalonia.remote.protocol/11.0.0/avalonia.remote.protocol.11.0.0.nupkg.sha512",
+    "/home/timothy/.nuget/packages/communitytoolkit.mvvm/8.2.0/communitytoolkit.mvvm.8.2.0.nupkg.sha512",
+    "/home/timothy/.nuget/packages/dynamicdata/7.9.5/dynamicdata.7.9.5.nupkg.sha512",
+    "/home/timothy/.nuget/packages/microcom.runtime/0.11.0/microcom.runtime.0.11.0.nupkg.sha512",
+    "/home/timothy/.nuget/packages/reactiveui/18.3.1/reactiveui.18.3.1.nupkg.sha512",
+    "/home/timothy/.nuget/packages/splat/14.4.1/splat.14.4.1.nupkg.sha512",
+    "/home/timothy/.nuget/packages/system.componentmodel.annotations/4.5.0/system.componentmodel.annotations.4.5.0.nupkg.sha512",
+    "/home/timothy/.nuget/packages/system.reactive/5.0.0/system.reactive.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

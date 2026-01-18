@@ -1,0 +1,95 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AwsDesigner.ViewModels"
+        xmlns:views="using:AwsDesigner.Views"
+        x:Class="AwsDesigner.Views.MainWindow"
+        Title="AWS Designer" Width="1100" Height="720">
+
+  <DockPanel LastChildFill="True">
+    <!-- Top toolbar -->
+    <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Background="#2b2b2b" Spacing="8" Padding="8">
+      <TextBlock Foreground="White" VerticalAlignment="Center" FontWeight="Bold" Text="AWS Visual Designer"/>
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+        <Button Content="Add EC2" Command="{Binding Workspace.Commands.AddEc2}" Margin="8,0"/>
+        <Button Content="Add S3" Command="{Binding Workspace.Commands.AddS3}" Margin="8,0"/>
+        <Button Content="Connect" Command="{Binding Workspace.Commands.StartConnect}" Margin="8,0"/>
+        <Button Content="Deploy (Dummy)" Command="{Binding Workspace.Commands.Deploy}" Margin="8,0"/>
+      </StackPanel>
+    </StackPanel>
+
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="220"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="280"/>
+      </Grid.ColumnDefinitions>
+
+      <!-- Toolbox -->
+      <Border Grid.Column="0" Background="#232323" Padding="12">
+        <StackPanel Spacing="10">
+          <TextBlock Text="Toolbox" Foreground="White" FontWeight="SemiBold"/>
+          <Button Content="EC2 Instance" Command="{Binding Workspace.Commands.AddEc2}"/>
+          <Button Content="S3 Bucket" Command="{Binding Workspace.Commands.AddS3}"/>
+          <Button Content="RDS" Command="{Binding Workspace.Commands.AddRds}"/>
+        </StackPanel>
+      </Border>
+
+      <!-- Canvas area -->
+      <Border Grid.Column="1" Background="#1e1e1e" Padding="8">
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+          <Canvas Background="#1e1e1e" Name="DesignerCanvas">
+            <!-- Connections layer -->
+            <ItemsControl Items="{Binding Workspace.Connections}">
+              <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                  <Canvas />
+                </ItemsPanelTemplate>
+              </ItemsControl.ItemsPanel>
+              <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                  <views:ConnectionView DataContext="{Binding}"/>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <!-- Nodes layer -->
+            <ItemsControl Items="{Binding Workspace.Nodes}">
+              <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                  <Canvas />
+                </ItemsPanelTemplate>
+              </ItemsControl.ItemsPanel>
+              <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                  <views:NodeControl Canvas.Left="{Binding X}" Canvas.Top="{Binding Y}" DataContext="{Binding}"/>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
+          </Canvas>
+        </ScrollViewer>
+      </Border>
+
+      <!-- Inspector / Properties -->
+      <Border Grid.Column="2" Background="#232323" Padding="12">
+        <StackPanel Spacing="8">
+          <TextBlock Text="Inspector" Foreground="White" FontWeight="SemiBold"/>
+          <StackPanel>
+            <TextBlock Text="Selected" Foreground="#ccc"/>
+            <ContentControl Content="{Binding Workspace.SelectedNode}">
+              <ContentControl.ContentTemplate>
+                <DataTemplate>
+                  <StackPanel>
+                    <TextBlock Text="{Binding Title}" Foreground="White" FontWeight="Bold"/>
+                    <TextBlock Text="Type: {Binding ResourceType}" Foreground="#ccc"/>
+                    <TextBlock Text="Position:" Foreground="#ccc"/>
+                    <TextBlock Text="X: {Binding X}  Y: {Binding Y}" Foreground="#ccc"/>
+                  </StackPanel>
+                </DataTemplate>
+              </ContentControl.ContentTemplate>
+            </ContentControl>
+          </StackPanel>
+        </StackPanel>
+      </Border>
+    </Grid>
+  </DockPanel>
+</Window>

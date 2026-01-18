@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AwsDesigner.Views.NodeControl"
+             Width="140" Height="72">
+
+  <Border Background="#2a2a2a" CornerRadius="6" BorderBrush="#444" BorderThickness="1" Padding="8">
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="20" />
+      </Grid.ColumnDefinitions>
+      <StackPanel>
+        <TextBlock Text="{Binding Title}" Foreground="White" FontWeight="SemiBold"/>
+        <TextBlock Text="{Binding ResourceType}" Foreground="#bbb" FontSize="12"/>
+      </StackPanel>
+
+      <Ellipse Grid.Column="1" Width="12" Height="12" Fill="#6bb9ff" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+    </Grid>
+  </Border>
+</UserControl>

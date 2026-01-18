@@ -1,0 +1,8 @@
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/AwsDesigner/obj/Debug/net9.0/AwsDesigner.csproj.AssemblyReference.cache
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/AwsDesigner/obj/Debug/net9.0/Avalonia/Resources.Inputs.cache
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/AwsDesigner/obj/Debug/net9.0/Avalonia/resources
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/AwsDesigner/obj/Debug/net9.0/AwsDesigner.GeneratedMSBuildEditorConfig.editorconfig
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/AwsDesigner/obj/Debug/net9.0/AwsDesigner.AssemblyInfoInputs.cache
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/AwsDesigner/obj/Debug/net9.0/AwsDesigner.AssemblyInfo.cs
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/AwsDesigner/obj/Debug/net9.0/AwsDesigner.csproj.CoreCompileInputs.cache
+/home/timothy/Desktop/Personal_Practice_Projects/AWS_Wrapper/AwsDesigner/obj/Debug/net9.0/AwsDesigner.sourcelink.json
