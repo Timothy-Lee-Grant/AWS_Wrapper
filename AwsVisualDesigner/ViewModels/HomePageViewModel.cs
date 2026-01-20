@@ -4,6 +4,7 @@ using System.Linq;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.Generic;
 using CommunityToolkit.Mvvm.Input;
+using System;
 
 namespace AwsVisualDesigner.ViewModels;
 
@@ -11,11 +12,19 @@ public partial class HomePageViewModel : ViewModelBase
 {
     public string Message {get;} = "This is my message";
     [ObservableProperty] private string _privateMessage = "This is my private message";
-    public List<string> Regions {get;} = new() {"east-1", "east-2", "west-1"};
-    [ObservableProperty] private string? _selectedRegion;
+    public List<string> Resource {get;} = new() {"Lambda Function", "RDS Database", "EC2"};
+    [ObservableProperty] private string? _selectedResource;
 
-    partial void OnSelectedRegionChanged(string? item)
+    partial void OnSelectedResourceChanged(string? value)
     {
-        Console.WriteLine($"I just got the data and you selected {item}");
+        Console.WriteLine($"I just got the data and you selected {value}");
+        //Eventually I will need to create the AWS resource based on which resouce they selected.
+
+        //determine resource selected
+        if (value == "Lambda Function")
+        {
+            
+        }
     }
+    
 }
