@@ -14,6 +14,7 @@ public partial class HomePageViewModel : ViewModelBase
     [ObservableProperty] private string _privateMessage = "This is my private message";
     public List<string> Resource {get;} = new() {"Lambda Function", "RDS Database", "EC2"};
     [ObservableProperty] private string? _selectedResource;
+    [ObservableProperty] private ViewModelBase? _currentResourceForm;
 
     partial void OnSelectedResourceChanged(string? value)
     {
@@ -26,5 +27,5 @@ public partial class HomePageViewModel : ViewModelBase
             
         }
     }
-    
+
 }
