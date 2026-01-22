@@ -3,6 +3,7 @@
         xmlns:vm="using:AwsVisualDesigner.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Views="using:AwsVisualDesigner.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AwsVisualDesigner.Views.HomePage"
         x:DataType="vm:HomePageViewModel"
@@ -16,7 +17,7 @@
     </Design.DataContext>
 
     <Grid ColumnDefinitions="300, *">
-        <StackPanel Grid.Column0 Padding="20" Spacing="10">
+        <StackPanel Grid.Column="0" Padding="20" Spacing="10">
             <ComboBox ItemsSource="{Binding Resource}"
                     SelectedItem="{Binding SelectedResource}" />
             
@@ -29,10 +30,10 @@
             <ContentControl Content="{Binding CurrentResourceForm}">
                 <ContentControl.DataTemplates>
                     <DataTemplate DataType="vm:LambdaFormViewModel">
-                        <Views:LambdaFormView />
+                        <Views:LambdaView />
                     </DataTemplate>
                     <DataTemplate DataType="vm:RdsFormViewModel">
-                        <Views:RdsFormView />
+                        <Views:RdsView />
                     </DataTemplate>
                 </ContentControl.DataTemplates>
             </ContentControl>

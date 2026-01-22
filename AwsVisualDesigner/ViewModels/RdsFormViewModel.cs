@@ -5,5 +5,5 @@ namespace AwsVisualDesigner.ViewModels;
 
 public partial class RdsFormViewModel : ViewModelBase
 {
-    [ObservableProperty] private string _name {get; set;} = "Name Not Set";
+    [ObservableProperty] private string _name = "Name Not Set";
 }

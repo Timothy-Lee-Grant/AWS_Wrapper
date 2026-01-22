@@ -28,4 +28,21 @@ public partial class HomePageViewModel : ViewModelBase
         }
     }
 
+    [RelayCommand]
+    private void SubmitResource()
+    {
+        // For now, just a check
+        Console.WriteLine("Submit button pressed!");
+
+        if (CurrentResourceForm is LambdaFormViewModel lambdaVm)
+        {
+            // 2. Extract the data from that specific ViewModel
+            string funcName = lambdaVm.Name; 
+            
+            // 3. Send it to your logic layer (Service)
+            _awsService.GenerateLambdaJson(funcName);
+            
+            Console.WriteLine($"Successfully sent {funcName} to the generator!");
+        }
+    }
 }
