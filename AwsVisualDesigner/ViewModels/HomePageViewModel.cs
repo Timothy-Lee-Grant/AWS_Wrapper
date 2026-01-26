@@ -40,7 +40,7 @@ public partial class HomePageViewModel : ViewModelBase
             string funcName = lambdaVm.Name; 
             
             // 3. Send it to your logic layer (Service)
-            _awsService.GenerateLambdaJson(funcName);
+            //_awsService.GenerateLambdaJson(funcName);
             
             Console.WriteLine($"Successfully sent {funcName} to the generator!");
         }

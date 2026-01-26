@@ -17,7 +17,7 @@
     </Design.DataContext>
 
     <Grid ColumnDefinitions="300, *">
-        <StackPanel Grid.Column="0" Padding="20" Spacing="10">
+        <StackPanel Grid.Column="0" Spacing="10">
             <ComboBox ItemsSource="{Binding Resource}"
                     SelectedItem="{Binding SelectedResource}" />
             
